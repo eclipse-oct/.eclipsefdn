@@ -61,5 +61,49 @@ orgs.newOrg('ecd.oct', 'eclipse-oct') {
         default_workflow_permissions: "write",
       },
     },
+    orgs.newRepo('oct-eclipse') {
+      allow_update_branch: false,
+      delete_branch_on_merge: false,
+      description: "Integration of Open Collaboration Tools with the Eclipse Platform",
+      has_discussions: true,
+      has_projects: false,
+      has_wiki: false,
+      homepage: "https://www.open-collab.tools/",
+      squash_merge_commit_message: "BLANK",
+      squash_merge_commit_title: "PR_TITLE",
+      topics+: [
+        "collaboration",
+        "live-share",
+        "real-time",
+        "eclipse",
+        "plug-in"
+      ],
+      web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
+    },
+    orgs.newRepo('oct-intellij') {
+      allow_update_branch: false,
+      delete_branch_on_merge: false,
+      description: "Integration of Open Collaboration Tools with the IntelliJ Platform",
+      has_discussions: true,
+      has_projects: false,
+      has_wiki: false,
+      homepage: "https://www.open-collab.tools/",
+      squash_merge_commit_message: "BLANK",
+      squash_merge_commit_title: "PR_TITLE",
+      topics+: [
+        "collaboration",
+        "live-share",
+        "real-time",
+        "intellij",
+        "plug-in"
+      ],
+      web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
+    },
   ],
 }
